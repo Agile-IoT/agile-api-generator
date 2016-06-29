@@ -19,7 +19,9 @@ Installation
 Usage
 ---
 
-Run `bin/export` to generate documentation. To create a specific format eg. `html` (see supported outputs for the available codes)
+Run `bin/export` to generate documentation.
+
+To create a specific format only (see supported outputs for the available codes) run providing the format as argument eg. `bin/export raml`
 
 License
 ---
