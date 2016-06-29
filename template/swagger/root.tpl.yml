@@ -17,12 +17,12 @@ consumes:
   - application/json
 produces:
   - application/json
-security:
-  - type: basic
-    in: header
-  - type: oauth2
-    authorizationUrl: /api/oauth
-    flow: [implicit, password, application, accessCode]
+# security:
+#   - type: basic
+#     in: header
+#   - type: oauth2
+#     authorizationUrl: /api/oauth
+#     flow: [implicit, password, application, accessCode]
 externalDocs:
   url: http://agile-iot.github.io/agile-api-spec/build/html/api.html
   description: DBus AGILE API spec
