@@ -1,0 +1,18 @@
+swagger: '2.0'
+info:
+  title: <%= title %>
+  description: <%= description %>
+  version: <%= version %>
+# the domain of the service
+host: <%= host %>
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: <%= basePath %>
+produces:
+  - application/json
+paths:
+<%= paths %>
+definitions:
+<%= types %>
