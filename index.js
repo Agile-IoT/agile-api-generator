@@ -5,9 +5,15 @@ var config = require('./config.json');
 var _ = require("lodash");
 var d = require("debug")("agile:gen");
 
+
+
+module.exports.loadApi = function () {
+  return parser.run();
+};
+
 module.exports.export = function (format) {
 
-  parser.run()
+  module.exports.loadApi()
     .then(function (definition) {
       d("Loaded %s classes", _.size(definition.classes));
       return definition.render(format);
