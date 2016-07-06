@@ -15,7 +15,9 @@ gulp.task('default', function() {
     "./lib/renderer/**/*.js",
     "./lib/model/**/*.js",
     "./template/**/*.html",
-    "../api/**/*.yml",
+    require('./config.json').outputDir + "/**/*.html",
+    require('./config.json').baseDir + "/**/*.yml",
+
   ], ['build']);
 
 });
