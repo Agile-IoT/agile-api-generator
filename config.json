@@ -1,4 +1,4 @@
 {
-  "baseDir": "./api/spec",
-  "outputDir": "./api/docs"
+  "baseDir": "../agile-api-spec/spec",
+  "outputDir": "../agile-api-spec/docs"
 }

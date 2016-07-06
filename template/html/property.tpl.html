@@ -24,9 +24,14 @@
 
   <div class="details hidden" data-for="<%= className %>.<%= name %>">
 
-    <% if(access) { %>
+    <% if(access && access.length) { %>
       <div class="access-container">
-        Access type <%= access %>
+        Access type <% _.forEach(access, function(aval) { %>
+          <span class="property-access access-<%-aval%>">
+            <%- aval.label %>
+          </span>
+          <span class="spacer">&nbsp;</span>
+        <% }) %>
       </div>
     <% } %>
 
