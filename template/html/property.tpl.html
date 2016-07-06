@@ -14,24 +14,28 @@
       <%= name %>
     </span>
 
+  </div>
+
+  <div class="pad-left details hidden" data-for="<%= className %>.<%= name %>">
+
     <% if(description) { %>
       <div class="description">
         <%= description %>
       </div>
     <% } %>
 
-  </div>
-
-  <div class="details hidden" data-for="<%= className %>.<%= name %>">
-
     <% if(access && access.length) { %>
       <div class="access-container">
-        Access type <% _.forEach(access, function(aval) { %>
-          <span class="property-access access-<%-aval%>">
-            <%- aval.label %>
-          </span>
-          <span class="spacer">&nbsp;</span>
-        <% }) %>
+        Access types:
+        <ul>
+          <% _.forEach(access, function(aval) { %>
+            <li>
+              <span class="property-access access-<%-aval%>">
+                <b><%- aval.label.substr(0, 1) %></b><%- aval.label.substr(1) %>
+              </span>
+            </li>
+          <% }) %>
+        </ul>
       </div>
     <% } %>
 

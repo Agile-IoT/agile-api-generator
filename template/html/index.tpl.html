@@ -24,11 +24,15 @@
 
     .api-class .details,
     .api-class .overview.open {
-      background: #EEE;
+      border-bottom: 1px dotted #EEE;
+      margin: 0.15em 0;
     }
 
-    .overview:hover, .overview:active {
-      background-color: #EEE;
+    .overview
+    {
+    }
+    .overview:hover
+    {
     }
 
     .description, .type {
@@ -83,7 +87,7 @@
       $(".api-class .hidden").hide();
 
       $(".api-class .overview").click(function() {
-        $(this).toggleClass("open");
+        // $(this).toggleClass("open");
         $(this).next().toggle();
       })
 
