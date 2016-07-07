@@ -23,9 +23,21 @@ produces:
 #   - type: oauth2
 #     authorizationUrl: /api/oauth
 #     flow: [implicit, password, application, accessCode]
+
 externalDocs:
   url: http://agile-iot.github.io/agile-api-spec
   description: DBus AGILE API spec
+
+tags:
+  - name: DeviceManager
+    description: Device management API
+  - name: Device
+    description: Device related API
+  - name: ProtocolManager
+    description: Protocol management API
+  - name: Protocol
+    description: Protocol related API
+
 paths:
 <%= paths %>
 definitions:
