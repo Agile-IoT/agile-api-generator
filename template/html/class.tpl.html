@@ -1,21 +1,35 @@
 <div class="api-class"
   data-type="class"
   data-magellan-target="<%= className.replace(/\./g, '_') %>"
-  id="<%= className.replace(/\./g, '_') %>"
+  id="<%= className.replace(/\./g, '_') %>"  
   >
 
   <h3>
+    <a
+      href="#<%= className.replace(/\./g, '_') %>"
+      >
+      <i
+        title="Permanent link"
+        class="fa fa-link text-smaller color-grey"
+        aria-hidden="true"></i>
+    </a>
     <%= className %>
   </h3>
   <div class="description"><%= description %></div>
   <hr />
 
-  <h4>Properties</h4>
+  <h4>
+    <small class="fa fa-tags" aria-hidden="true"></small>
+    Properties
+  </h4>
   <ul class="api-class-properties" data-type="properties">
     <%= properties %>
   </ul>
 
-  <h4>Methods</h4>
+  <h4>
+    <small class="fa fa-cogs" aria-hidden="true"></small>
+    Methods
+  </h4>
   <ul class="api-class-methods" data-type="methods">
     <%= methods %>
   </ul>

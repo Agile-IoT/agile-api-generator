@@ -26,7 +26,7 @@
 
     <% if(access && access.length) { %>
       <div class="access-container">
-        Access types:
+        <h5>Access types:</h5>
         <ul>
           <% _.forEach(access, function(aval) { %>
             <li>
@@ -41,7 +41,8 @@
 
     <% if(example) { %>
       <div class="example-container">
-        Example <pre class="example"><%= example %></pre>
+        <h5>Example:</h5>
+        <pre class="example"><%= example %></pre>
       </div>
     <% } %>
 

@@ -7,10 +7,10 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 # the domain of the service
-host: <%= host %>
+host: localhost:8080
 # array of all schemes that your API supports
 schemes:
-  - https
+  - http
 # will be prefixed to all paths
 basePath: <%= basePath %>
 consumes:
@@ -24,7 +24,7 @@ produces:
 #     authorizationUrl: /api/oauth
 #     flow: [implicit, password, application, accessCode]
 externalDocs:
-  url: http://agile-iot.github.io/agile-api-spec/build/html/api.html
+  url: http://agile-iot.github.io/agile-api-spec
   description: DBus AGILE API spec
 paths:
 <%= paths %>
