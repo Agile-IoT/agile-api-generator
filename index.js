@@ -19,6 +19,7 @@ module.exports.export = function (format) {
       return definition.render(format);
     })
     .then(function (outputs) {
+
       if(typeof outputs === 'string') {
         outputs = [
           {
@@ -26,6 +27,10 @@ module.exports.export = function (format) {
             content: outputs
           }
         ];
+      }
+
+      if(!outputs) {
+        throw new Error("No output available for " + format);
       }
 
       return Promise.all(outputs.map(function(file) {

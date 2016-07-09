@@ -1,0 +1,6 @@
+
+<signal name="<%= signal.name %>">
+  <% signal.args.forEach(function(arg) { %>
+    <arg name="<%= arg.name %>" type="<%= arg.type %>" />
+  <%}) %>
+</signal>
