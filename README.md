@@ -6,8 +6,9 @@ Supported outputs
 
 - DBus API as `html`
 - DBus API as `json`
-- Restful API in `raml` v1.0
 - Restful API in `swagger` v2.0
+- ~~Restful API in `raml` v1.0~~ To be refactored, waiting for proper 1.0 support!
+
 
 Installation
 ---
