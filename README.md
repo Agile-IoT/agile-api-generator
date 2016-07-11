@@ -15,6 +15,8 @@ Installation
 1. Clone the repository
 2. Install `nodejs` and its `npm` package
 3. From the repository directory run `npm i`
+4. Edit `./config.json` to point to a clone of [agile-iot/agile-api-spec](https://github.com/Agile-IoT/agile-api-spec)
+5. run `bin/api-export`, see above for details on usage
 
 Usage
 ---
