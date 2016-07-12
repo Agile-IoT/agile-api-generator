@@ -6,8 +6,9 @@ Supported outputs
 
 - DBus API as `html`
 - DBus API as `json`
-- Restful API in `raml` v1.0
 - Restful API in `swagger` v2.0
+- ~~Restful API in `raml` v1.0~~ To be refactored, waiting for proper 1.0 support!
+
 
 Installation
 ---
@@ -15,6 +16,8 @@ Installation
 1. Clone the repository
 2. Install `nodejs` and its `npm` package
 3. From the repository directory run `npm i`
+4. Edit `./config.json` to point to a clone of [agile-iot/agile-api-spec](https://github.com/Agile-IoT/agile-api-spec)
+5. run `bin/api-export`, see above for details on usage
 
 Usage
 ---
@@ -22,6 +25,8 @@ Usage
 Run `bin/export` to generate documentation.
 
 To create a specific format only (see supported outputs for the available codes) run providing the format as argument eg. `bin/export raml`
+
+To automate the building of the api while editing there is a `gulp` task which serve on a local webserver (http://localhost:8000) the generated api at every change. Use [livereload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) in chrome to get the page reloaded automatically.
 
 License
 ---
