@@ -1,2 +1,6 @@
 
-<property name="<%= property.name %>" type="<%= property.type %>" access="<%= property.access %>" />
+<property
+  name="<%= property.name %>"
+  type="<%= property.type %>"
+  access="<%= property.access %>"
+  />
