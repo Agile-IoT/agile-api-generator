@@ -1,3 +1,6 @@
+  <!--
+  <%= comment %>
+  -->
   <method name="<%= method.name %>">
   <% method.args.forEach(function(arg) { %>
       <arg name="<%= arg.name %>" type="<%= arg.type %>" direction="<%= arg.direction %>"/><%
