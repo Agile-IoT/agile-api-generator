@@ -22,9 +22,9 @@ Installation
 Usage
 ---
 
-Run `bin/export` to generate documentation.
+Run `bin/api-export` to generate documentation.
 
-To create a specific format only (see supported outputs for the available codes) run providing the format as argument eg. `bin/export raml`
+To create a specific format only (see supported outputs for the available codes) run providing the format as argument eg. `bin/api-export raml`
 
 To automate the building of the api while editing there is a `gulp` task which serve on a local webserver (http://localhost:8000) the generated api at every change. Use [livereload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) in chrome to get the page reloaded automatically.
 
