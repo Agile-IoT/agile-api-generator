@@ -4,6 +4,7 @@
   "description": "Generate AGILE API docs",
   "main": "index.js",
   "scripts": {
+    "export": "./bin/api-export",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luca Capra <lcapra@create-net.org>",
