@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luca Capra <lcapra@create-net.org>",
-  "license": "Apache-2.0",
+  "license": "EPL-2.0",
   "dependencies": {
     "bluebird": "^3.4.0",
     "debug": "^2.2.0",
