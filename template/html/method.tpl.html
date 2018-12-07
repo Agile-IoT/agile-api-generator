@@ -1,0 +1,57 @@
+<!--
+Copyright (C) 2017 Create-Net / FBK.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License 2.0
+which accompanies this distribution, and is available at
+https://www.eclipse.org/legal/epl-2.0/
+
+SPDX-License-Identifier: EPL-2.0
+
+Contributors:
+    Create-Net / FBK - initial API and implementation
+-->
+<li
+  class="api-class-method"
+  data-type="method"
+  data-id="<%= className %>.<%= name %>"
+  id="<%= className %>_<%= name %>"
+>
+
+  <div class="overview">
+
+    <span class="returnType type secondary">
+      <% if(returnTypeLink) { %>
+        <a href="#<%= returnTypeLink %>"><%= returnType %></a>
+      <% } else { %>
+        <%= returnType %>
+      <% } %>
+    </span>
+
+    <span class="name"><%= name %>(</span>
+      <span class="args"><%= args %></span>
+    <span class="name">)</span>
+
+    <% if(description) { %>
+      <div class="description">
+        <%= description %>
+      </div>
+    <% } %>
+
+  </div>
+
+  <div class="details hidden pad-left" data-for="<%= className %>.<%= name %>">
+
+    <% if(example) { %>
+      <div class="example-container">
+        Example <pre class="example"><%= example %></pre>
+      </div>
+    <% } %>
+
+    <% if(details) { %>
+      <div class="method-overview">
+        <%= details %>
+      </div>
+    <% } %>
+  </div>
+
+</li>

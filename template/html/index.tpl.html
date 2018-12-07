@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+Copyright (C) 2017 Create-Net / FBK.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License 2.0
+which accompanies this distribution, and is available at
+https://www.eclipse.org/legal/epl-2.0/
+
+SPDX-License-Identifier: EPL-2.0
+
+Contributors:
+    Create-Net / FBK - initial API and implementation
+-->
+<html>
+
+<head>
+  <title>AGILE API spec</title>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/plugins/foundation.sticky.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/0.7.1/lunr.min.js"></script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <meta name="Description" content="AGILE API specification documentation">
+
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <style>
+
+    .overview {
+      cursor: pointer;
+    }
+
+    h5
+    {
+      border-bottom: 1px dotted #EEE;
+      margin: 0.15em 0;
+    }
+
+    .overview
+    {
+    }
+    .overview:hover
+    {
+    }
+
+    .description, .type {
+      color: #333;
+    }
+    .type {
+      font-size: 80%;
+    }
+    .name {
+      font-weight: bold;
+    }
+    .pad-left {
+      padding-left: .5em;
+      margin-left: 1em;
+      border-left: 1px solid #EEE;
+    }
+
+    nav.menu {
+      overflow-y: scroll;
+      max-height: 480px;
+    }
+
+    .top-bar, .top-bar ul {
+      background-color: white;
+    }
+
+    .hidden {
+      display: block;
+    }
+
+    .color-black {
+      color: black !important;
+    }
+    .color-grey {
+      color: #BBB !important;
+    }
+
+    .text-bigger, .text-bigger:before {
+      font-size: 140%;
+    }
+    .text-smaller, .text-smaller:before {
+      font-size: 70%;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <%= menu %>
+
+  <hr />
+
+  <div class="row">
+    <div class="columns large-12 medium-12 small-12">
+      <%= content %>
+    </div>
+  </div>
+
+  <script>
+    jQuery(function($) {
+
+      $('body').foundation();
+
+      $(".api-class .hidden").hide();
+
+      $(".api-class .overview").click(function() {
+        // $(this).toggleClass("open");
+        $(this).next().toggle();
+      })
+
+      $(".api-class .details .overview").off("click");
+      $(".api-class .details .hidden").show();
+
+    });
+  </script>
+</body>
+</html>

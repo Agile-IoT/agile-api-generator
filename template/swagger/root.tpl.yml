@@ -1,0 +1,56 @@
+#-------------------------------------------------------------------------------
+# Copyright (C) 2017 Create-Net / FBK.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License 2.0
+# which accompanies this distribution, and is available at
+# https://www.eclipse.org/legal/epl-2.0/
+# 
+# SPDX-License-Identifier: EPL-2.0
+# 
+# Contributors:
+#     Create-Net / FBK - initial API and implementation
+#-------------------------------------------------------------------------------
+swagger: '2.0'
+info:
+  title: <%= title %>
+  description: <%= description %>
+  version: <%= version %>
+  license:
+    name: EPL-2.0
+    url: https://www.eclipse.org/legal/epl-2.0/
+# the domain of the service
+host: localhost:8080
+# array of all schemes that your API supports
+schemes:
+  - http
+# will be prefixed to all paths
+basePath: <%= basePath %>
+consumes:
+  - application/json
+produces:
+  - application/json
+# security:
+#   - type: basic
+#     in: header
+#   - type: oauth2
+#     authorizationUrl: /api/oauth
+#     flow: [implicit, password, application, accessCode]
+
+externalDocs:
+  url: http://agile-iot.github.io/agile-api-spec
+  description: DBus AGILE API spec
+
+tags:
+  - name: DeviceManager
+    description: Device management API
+  - name: Device
+    description: Device related API
+  - name: ProtocolManager
+    description: Protocol management API
+  - name: Protocol
+    description: Protocol related API
+
+paths:
+<%= paths %>
+definitions:
+<%= types %>

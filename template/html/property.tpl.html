@@ -1,0 +1,67 @@
+<!--
+Copyright (C) 2017 Create-Net / FBK.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License 2.0
+which accompanies this distribution, and is available at
+https://www.eclipse.org/legal/epl-2.0/
+
+SPDX-License-Identifier: EPL-2.0
+
+Contributors:
+    Create-Net / FBK - initial API and implementation
+-->
+<li
+  class="api-class-property"
+  data-type="property"
+  data-id="<%= className %>.<%= name %>"
+  id="<%= className %>_<%= name %>"
+>
+
+  <div class="overview">
+
+    <span class="type">
+      <% if(typeLink) { %>
+        <a href="#<%= typeLink %>"><%= type %></a>
+      <% } else { %>
+        <%= type %>
+      <% } %>
+    </span>
+
+    <span class="name" id="<%= name %>">
+      <%= name %>
+    </span>
+
+  </div>
+
+  <div class="pad-left details hidden" data-for="<%= className %>.<%= name %>">
+
+    <% if(description) { %>
+      <div class="description">
+        <%= description %>
+      </div>
+    <% } %>
+
+    <% if(access && access.length) { %>
+      <div class="access-container">
+        <h5>Access types:</h5>
+        <ul>
+          <% _.forEach(access, function(aval) { %>
+            <li>
+              <span class="property-access access-<%-aval%>">
+                <b><%- aval.label.substr(0, 1) %></b><%- aval.label.substr(1) %>
+              </span>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    <% } %>
+
+    <% if(example) { %>
+      <div class="example-container">
+        <h5>Example:</h5>
+        <pre class="example"><%= example %></pre>
+      </div>
+    <% } %>
+
+  </div>
+</li>

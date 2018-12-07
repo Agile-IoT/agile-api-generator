@@ -1,0 +1,63 @@
+#%RAML 1.0
+#-------------------------------------------------------------------------------
+# Copyright (C) 2017 Create-Net / FBK.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License 2.0
+# which accompanies this distribution, and is available at
+# https://www.eclipse.org/legal/epl-2.0/
+# 
+# SPDX-License-Identifier: EPL-2.0
+# 
+# Contributors:
+#     Create-Net / FBK - initial API and implementation
+#-------------------------------------------------------------------------------
+title: <%= title %>
+version: <%= version %>
+baseUri: <%= baseUri %>
+mediaType:  application/json
+annotationTypes:
+  reference: string
+securitySchemes:
+  oauth2:
+    description: |
+      API uses OAuth 2.0 for authenticating all API requests.
+    type: OAuth 2.0
+    describedBy:
+      headers:
+        Authorization:
+          description: |
+             Used to send a valid OAuth 2 access token. Do not use
+             with the "access_token" query string parameter.
+          type: string
+      queryParameters:
+        access_token:
+          description: |
+             Used to send a valid OAuth 2 access token. Do not use with
+             the "Authorization" header.
+          type: string
+      responses:
+        401:
+          description: |
+              Bad or expired token. This can happen if the user or 3rdy party service
+              revoked or expired an access token. To fix, re-authenticate
+              the user.
+        403:
+          description: |
+              Bad OAuth request (wrong consumer key, bad nonce, expired
+              timestamp...). Unfortunately, re-authenticating the user won't help here.
+    settings:
+      authorizationUri: /oauth2/authorize
+      accessTokenUri: /oauth2/token
+      authorizationGrants: [ authorization_code, implicit, password ]
+  basic:
+    description: |
+      This API supports Basic Authentication.
+    type: Basic Authentication
+types:
+<%= types %>
+# resourceTypes:
+  # collection: !include types/collection.raml
+# traits:
+securedBy: [ oauth2, basic ]
+
+<%= api %>

@@ -1,0 +1,49 @@
+<!--
+Copyright (C) 2017 Create-Net / FBK.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License 2.0
+which accompanies this distribution, and is available at
+https://www.eclipse.org/legal/epl-2.0/
+
+SPDX-License-Identifier: EPL-2.0
+
+Contributors:
+    Create-Net / FBK - initial API and implementation
+-->
+<div class="api-class"
+  data-type="class"
+  data-magellan-target="<%= className.replace(/\./g, '_') %>"
+  id="<%= className.replace(/\./g, '_') %>"  
+  >
+
+  <h3>
+    <a
+      href="#<%= className.replace(/\./g, '_') %>"
+      >
+      <i
+        title="Permanent link"
+        class="fa fa-link text-smaller color-grey"
+        aria-hidden="true"></i>
+    </a>
+    <%= className %>
+  </h3>
+  <div class="description"><%= description %></div>
+  <hr />
+
+  <h4>
+    <small class="fa fa-tags" aria-hidden="true"></small>
+    Properties
+  </h4>
+  <ul class="api-class-properties" data-type="properties">
+    <%= properties %>
+  </ul>
+
+  <h4>
+    <small class="fa fa-cogs" aria-hidden="true"></small>
+    Methods
+  </h4>
+  <ul class="api-class-methods" data-type="methods">
+    <%= methods %>
+  </ul>
+
+</div>

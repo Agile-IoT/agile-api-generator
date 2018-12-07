@@ -1,0 +1,84 @@
+<!--
+Copyright (C) 2017 Create-Net / FBK.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License 2.0
+which accompanies this distribution, and is available at
+https://www.eclipse.org/legal/epl-2.0/
+
+SPDX-License-Identifier: EPL-2.0
+
+Contributors:
+    Create-Net / FBK - initial API and implementation
+-->
+<div class="title-bar"
+  data-responsive-toggle="example-menu"
+  data-hide-for="medium"
+  class="sticky"
+  data-sticky
+>
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+
+<div id="main-menu" class="top-bar" >
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+
+      <li class="">
+        <a href="https://github.com/Agile-IoT" class="inline">
+          <img
+            src="http://www.agile-project-iot.eu/wp-content/uploads/2016/03/logo-png-transparent-02_small.png"
+            style="max-width: 40px"
+          />
+        </a>
+        <b class="text-small">API spec</b>
+      </li>
+
+      <% menu.forEach(function(group) { %>
+        <li>
+          <a href="#"><%= group.title %></a>
+          <ul class="menu vertical <%= group.type %>">
+            <% group.list.forEach(function(title) { %>
+              <li>
+                <a href="#<%= title.replace(/\./g, '_') %>" data-for="<%= title.replace(/\./g, '_') %>">
+                  <%= title %>
+                </a>
+              </li>
+              <% }) %>
+          </ul>
+        </li>
+        <% }) %>
+
+        <li>
+          <a href="#">Restful HTTP API</a>
+          <ul class="menu vertical">
+            <li> <a href="http://petstore.swagger.io/?url=http://agile-iot.github.io/agile-api-spec/docs/swagger/api.swagger.yml">REST API docs </a> </li>
+            <li> <a href="../swagger/api.swagger.yml">SWAGGER API spec</a> </li>
+            <!-- <li> <a href="../raml/api.raml"><small>[alpha]</small>RAML API spec</a> </li> -->
+          </ul>
+        </li>
+
+        <li>
+          <a href="https://github.com/Agile-IoT/agile-api-spec/tree/master/docs/dbus-xml">
+            DBus XML Instrospection
+          </a>
+        </li>
+
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><%= search %></li>
+      <li>
+        <a href="https://github.com/Agile-IoT/agile-api-spec" title="Go to repository">
+          <i class="fa fa-github text-bigger color-black" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/agile_iot" title="Get in touch on Twitter">
+          <i class="fa fa-twitter text-bigger color-black" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
